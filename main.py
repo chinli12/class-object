@@ -12,7 +12,7 @@
 
 class Student:
     # [assignment] Skeleton class. Add your code here
-    def __init__(self, name, age, tracks, score):
+    def __init__(self, name, age, tracks=[], score=0):
         self.name = name
         self.age = age
         self.tracks = tracks
@@ -27,7 +27,7 @@ class Student:
         print(f"the new age is {self.age}")
 
     def add_track(self, new_track):
-        self.tracks = new_track
+        self.tracks.append(new_track)
         print(f"the new track is {self.tracks}")
 
     def get_score(self, new_score):
@@ -42,4 +42,4 @@ Bob = Student(name="Bob", age=26, tracks=["FE", "BE"], score=20.90)
 Bob.change_name("Peter")
 Bob.change_age(34)
 Bob.add_track("UI/UX")
-Bob.get_score(60.0)
+Bob.get_score(100)
